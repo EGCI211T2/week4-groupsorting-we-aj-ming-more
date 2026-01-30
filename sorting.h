@@ -1,4 +1,4 @@
-#ifndefine SORTING_H
+#ifndef SORTING_H
 #define SORTING_H
 
 #include <iomanip>
@@ -19,7 +19,7 @@ void display(int a[],int n){
 void selectionSort(int data[], int length) 
 { 
 	int i, j, m, mi; 
-	
+	cout <<"selection" <<endl;
      display(data,length);
      
 	
@@ -29,7 +29,8 @@ void selectionSort(int data[], int length)
 
 void insertion(int a[],int n){
 
-
+cout << "insert" << endl;
+display(a, n);
 }
 
 void swap(int &a,int &b){
@@ -45,6 +46,7 @@ void bubbleSort(int a[],int n){
 int i,j;
 int sorted;
 // how may pair to compare?
+cout << "bubble" << endl;
 for(j=1;j<n;j++){
 
 
