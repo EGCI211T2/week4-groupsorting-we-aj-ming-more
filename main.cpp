@@ -16,6 +16,7 @@ int main(int argc, char**argv) {
 
    display(a,N);
  cout << type <<endl;
+ cout << type <<endl;
   if(argc>1){
        if      (type=="quick")     quicksort(a, 0, N-1); //check sorting.h for explanation! - Cj. I used the GeeksforGeeks quicksort algorithm.
        else if (type=="selection") selectionSort(a,N);
