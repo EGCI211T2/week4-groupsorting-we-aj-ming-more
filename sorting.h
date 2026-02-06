@@ -5,6 +5,13 @@ using namespace std;
 #include <iomanip>
 /* function prototype*/
 
+void swap(int &a,int &b){
+ int temp;
+  temp=a;
+  a=b;
+  b=temp;
+  
+}
 
 void display(int a[],int n){
 
@@ -17,21 +24,29 @@ void display(int a[],int n){
   
 }
 
-void selectionSort(int data[], int length) 
+void selectionSort(int *a, int length) 
 { 
-	int i, j, m, mi; 
-	cout <<"selection" <<endl;
-     display(data,length);
+  int i, j;
+  int *p;
+  for(j = 0; j < length-1; j++)
+  {
+      p = &a[j];
+      for(i = j+1; i < length; i++)
+      {
+          if(*p > a[i])
+          {
+              p = &a[i];
+          }
+      }
+  swap(a[j], *p);
+  }
      
-	
 } 
-
 
 
 void insertion(int a[],int n){
 
-cout << "insert" << endl;
-display(a, n);
+
 }
 
 void swap(int &a,int &b){
@@ -47,13 +62,14 @@ void bubbleSort(int a[],int n){
 int i,j;
 int sorted;
 // how may pair to compare?
-cout << "bubble" << endl;
 for(j=1;j<n;j++){
 
-display(a,n);
- }  
-}
 
+	
+  display(a,n);
+ }
+  
+}
 
 // Quicksort Algorithm, 6880815 CJ. 
 int partition(int a[],int first,int last) // first can be omitted and 0 used in its place,
@@ -90,7 +106,3 @@ void quicksort(int a[],int first,int last)
 
 
 #endif
-
-
-
-
