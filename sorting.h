@@ -1,5 +1,6 @@
 #ifndef SORTING_H
 #define SORTING_H
+using namespace std;
 
 #include <iomanip>
 /* function prototype*/
