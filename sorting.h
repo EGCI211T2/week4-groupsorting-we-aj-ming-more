@@ -44,18 +44,18 @@ void selectionSort(int *a, int length)
 } 
 
 
-void insertion(int a[],int n){
-
-
+void insertionSort(int a[], int n) {
+    int i, j, value;
+    for (i = 1; i < n; i++) {
+        value = a[i];
+        for (j = i - 1; j >= 0 && a[j] > value; j--) {
+            a[j + 1] = a[j];
+        }
+        a[j + 1] = value;
+        display(a, n); // Showing progress
+    }
 }
 
-void swap(int &a,int &b){
- int temp;
-  temp=a;
-  a=b;
-  b=temp;
-  
-}
 
 void bubbleSort(int a[],int n){
 

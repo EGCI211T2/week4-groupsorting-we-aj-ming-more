@@ -20,7 +20,7 @@ int main(int argc, char**argv) {
   if(argc>1){
        if      (type=="quick")     quicksort(a, 0, N-1); //check sorting.h for explanation! - Cj. I used the GeeksforGeeks quicksort algorithm.
        else if (type=="selection") selectionSort(a,N);
-       else if (type=="insert")    insertion(a,N);
+       else if (type=="insert")    insertionSort(a,N);
        else if (type=="bubble")    bubbleSort(a,N);
        else    {cout<<"Invalid Sorting Type."; return -1;}
        //selectionSort(a,N);
