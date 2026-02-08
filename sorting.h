@@ -30,6 +30,7 @@ void selectionSort(int *a, int length)
   int *p;
   for(j = 0; j < length-1; j++)
   {
+    display(a,length);
       p = &a[j];
       for(i = j+1; i < length; i++)
       {
